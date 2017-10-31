@@ -5,7 +5,11 @@ import java.util.Vector;
 
 import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
 
-
+/**
+ * 测试文件
+ * @author wq
+ *
+ */
 public class Test {
 
 	public static void main(String[] args) {
