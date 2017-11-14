@@ -1,8 +1,11 @@
 package collection;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 import java.util.Vector;
 
+import com.google.common.collect.Maps;
 import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
 
 /**
@@ -15,10 +18,21 @@ public class Test {
 	public static void main(String[] args) {
 		//vectorTest();
 		
-		stackTest();
+		//stackTest();
 		
-		stringStackTest();
+		//stringStackTest();
+		
+		stringHashMapTest();
+		
+	}
 
+	private static void stringHashMapTest() {
+		HashMap<Object, Object> newHashMapWithExpectedSize = Maps.newHashMapWithExpectedSize(100);
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>(133);
+		for (int i = 0; i < 100; i++) {
+			map.put(i, i);
+		}
+		
 	}
 
 	private static void stringStackTest() {
