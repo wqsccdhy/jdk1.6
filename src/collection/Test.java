@@ -27,8 +27,13 @@ public class Test {
 	}
 
 	private static void stringHashMapTest() {
-		HashMap<Object, Object> newHashMapWithExpectedSize = Maps.newHashMapWithExpectedSize(100);
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>(133);
+		
+		//在元素的装载数量明确的时候HashMap的大小应该如何选择。
+		//https://www.cnblogs.com/coderxuyang/p/3718856.html
+		
+		//可以根据也知的元素数据，初始化HashMaP的大小
+		HashMap<Object, Object> map = Maps.newHashMapWithExpectedSize(100);
+		//Map<Integer, Integer> map = new HashMap<Integer, Integer>(100);
 		for (int i = 0; i < 100; i++) {
 			map.put(i, i);
 		}
